@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://d4fb6o8wrg6ub"]
+[gd_scene load_steps=10 format=4 uid="uid://d4fb6o8wrg6ub"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_cj8pr"]
 [ext_resource type="PackedScene" uid="uid://dyp0u7thvx3nv" path="res://player.tscn" id="2_e1b0o"]
@@ -6,6 +6,19 @@
 [ext_resource type="PackedScene" uid="uid://knlbo3juxoef" path="res://spikes.tscn" id="4_n655l"]
 [ext_resource type="PackedScene" uid="uid://bc4x1ya6oroi" path="res://Scenes/Enemies/walking_enemy.tscn" id="5_cxe4b"]
 [ext_resource type="PackedScene" uid="uid://bvsu0re5t7n6v" path="res://Scenes/World/Ladder.tscn" id="6_5egw0"]
+[ext_resource type="PackedScene" uid="uid://bv0t0krhtymmb" path="res://Scenes/Enemies/moving_spike_enemy.tscn" id="7_8vv3n"]
+
+[sub_resource type="Curve2D" id="Curve2D_hsgdm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 134, 26, 0, 0, 0, 0, 195, 26)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_rk2n6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 135, 27, 0, 0, 0, 0, 238, 26, 0, 0, 0, 0, 238, -66, 0, 0, 0, 0, 187, -66, 0, 0, 0, 0, 186, -86, 0, 0, 0, 0, 116, -86, 0, 0, 0, 0, 115, 27, 0, 0, 0, 0, 135, 27)
+}
+point_count = 8
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_cj8pr")
@@ -49,3 +62,14 @@ position = Vector2(288, 126)
 
 [node name="WalkingEnemy3" parent="." instance=ExtResource("5_cxe4b")]
 position = Vector2(262, 34)
+
+[node name="MovingSpikeEnemy" parent="." instance=ExtResource("7_8vv3n")]
+position = Vector2(-108, 72)
+curve = SubResource("Curve2D_hsgdm")
+animation_type = 1
+speed = 3.0
+
+[node name="MovingSpikeEnemy2" parent="." instance=ExtResource("7_8vv3n")]
+position = Vector2(56, 72)
+curve = SubResource("Curve2D_rk2n6")
+speed = 0.75
