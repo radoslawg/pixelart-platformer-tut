@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyp0u7thvx3nv"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_15gbl"]
+[ext_resource type="Texture2D" uid="uid://c54oro4n3hmbs" path="res://tilemap-characters_packed.png" id="1_ur7qf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dynll"]
+atlas = ExtResource("1_ur7qf")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_diisq"]
+atlas = ExtResource("1_ur7qf")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdlkf"]
+atlas = ExtResource("1_ur7qf")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qidxj"]
+atlas = ExtResource("1_ur7qf")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1wogp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dynll")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_diisq")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdlkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qidxj")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5dyl"]
+size = Vector2(8, 13)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_15gbl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9, -9)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_1wogp")
+animation = &"Idle"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, -6.5)
+shape = SubResource("RectangleShape2D_x5dyl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(79, -22)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+editor_draw_drag_margin = true
+
+[node name="LadderCheck" type="RayCast2D" parent="."]
+position = Vector2(9, -14)
+target_position = Vector2(0, 16)
+hit_from_inside = true
+collide_with_areas = true
+collide_with_bodies = false

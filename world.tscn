@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=4 uid="uid://d4fb6o8wrg6ub"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_cj8pr"]
+[ext_resource type="PackedScene" uid="uid://dyp0u7thvx3nv" path="res://player.tscn" id="2_e1b0o"]
+[ext_resource type="PackedScene" uid="uid://dwjrht2mchjxu" path="res://tile_map.tscn" id="3_ot5cc"]
+[ext_resource type="PackedScene" uid="uid://knlbo3juxoef" path="res://spikes.tscn" id="4_n655l"]
+[ext_resource type="PackedScene" uid="uid://bc4x1ya6oroi" path="res://Scenes/Enemies/walking_enemy.tscn" id="5_cxe4b"]
+[ext_resource type="PackedScene" uid="uid://bvsu0re5t7n6v" path="res://Scenes/World/Ladder.tscn" id="6_5egw0"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_cj8pr")
+
+[node name="TileMapLayer" parent="." instance=ExtResource("3_ot5cc")]
+tile_map_data = PackedByteArray("AAADAAcAAAAFAAEAAAAEAAcAAAACAAYAAAAFAAcAAAACAAYAAAAGAAcAAAACAAYAAAAHAAcAAAACAAYAAAAIAAcAAAAEAAEAAAAJAAcAAAACAAMAAAAKAAcAAAACAAMAAAALAAcAAAACAAMAAAAMAAcAAAACAAMAAAACAAcAAAACAAMAAAABAAcAAAAEAAEAAAAAAAcAAAACAAYAAAD//wcAAAACAAYAAAD+/wcAAAAFAAEAAAD9/wcAAAACAAMAAAANAAcAAAACAAMAAAAOAAcAAAACAAMAAAAPAAcAAAACAAMAAAAQAAcAAAADAAMAAAD9/wgAAAACAAYAAAD+/wgAAAACAAYAAAD//wgAAAACAAYAAAAAAAgAAAACAAYAAAABAAgAAAACAAYAAAACAAgAAAACAAYAAAADAAgAAAACAAYAAAAEAAgAAAACAAYAAAAFAAgAAAACAAYAAAAGAAgAAAACAAYAAAAHAAgAAAACAAYAAAAIAAgAAAACAAYAAAAJAAgAAAACAAYAAAAKAAgAAAACAAYAAAALAAgAAAACAAYAAAAMAAgAAAACAAYAAAANAAgAAAACAAYAAAAOAAgAAAACAAYAAAAPAAgAAAACAAYAAAAQAAgAAAAEAAEAAAD8/wgAAAABAAYAAAD8/wcAAAABAAMAAAD+/wYAAAABAAMAAAD//wYAAAAFAAEAAAD//wUAAAABAAMAAAAAAAUAAAADAAMAAAAAAAYAAAAEAAEAAAABAAYAAAADAAMAAAAEAAYAAAACAAMAAAAFAAYAAAAFAAEAAAAGAAYAAAACAAYAAAAHAAYAAAAEAAEAAAAHAAUAAAADAAMAAAAGAAUAAAACAAMAAAAIAAYAAAADAAMAAAADAAYAAAABAAMAAAAFAAUAAAABAAMAAAAKAAQAAAAHAAIAAAALAAQAAAAHAAIAAAAMAAQAAAAHAAIAAAANAAQAAAAHAAIAAAANAAMAAAAHAAIAAAANAAIAAAAHAAIAAAAOAAIAAAAHAAIAAAAPAAIAAAAHAAIAAAAOAAMAAAAHAAIAAAAOAAQAAAAHAAIAAAAPAAQAAAAHAAIAAAAPAAMAAAAHAAIAAAD8/wUAAAAHAAIAAAD7/wUAAAAHAAIAAAD6/wUAAAAHAAIAAAD5/wUAAAAHAAIAAAARAAgAAAACAAMAAAASAAgAAAACAAMAAAATAAgAAAACAAMAAAAUAAgAAAAFAAEAAAAUAAcAAAABAAMAAAAVAAcAAAACAAMAAAAWAAcAAAACAAMAAAAXAAcAAAADAAMAAAAVAAgAAAACAAYAAAAWAAgAAAACAAYAAAAXAAgAAAADAAYAAAAXAAkAAAADAAcAAAAWAAkAAAACAAcAAAAVAAkAAAACAAcAAAAUAAkAAAACAAcAAAATAAkAAAACAAcAAAASAAkAAAACAAcAAAARAAkAAAACAAcAAAAQAAkAAAACAAcAAAAPAAkAAAACAAcAAAAOAAkAAAACAAcAAAANAAkAAAACAAcAAAAMAAkAAAACAAcAAAALAAkAAAACAAcAAAAKAAkAAAACAAcAAAAJAAkAAAACAAcAAAAIAAkAAAACAAcAAAAHAAkAAAACAAcAAAAGAAkAAAACAAcAAAAFAAkAAAACAAcAAAAEAAkAAAACAAcAAAADAAkAAAACAAcAAAACAAkAAAACAAcAAAABAAkAAAACAAcAAAAAAAkAAAACAAcAAAD//wkAAAACAAcAAAD+/wkAAAACAAcAAAD9/wkAAAACAAcAAAD8/wkAAAABAAcAAAA=")
+
+[node name="Spikes" parent="." instance=ExtResource("4_n655l")]
+position = Vector2(36, 126)
+
+[node name="Spikes2" parent="." instance=ExtResource("4_n655l")]
+position = Vector2(162, 126)
+
+[node name="Ladder" parent="." instance=ExtResource("6_5egw0")]
+position = Vector2(-54, 126)
+
+[node name="Ladder2" parent="." instance=ExtResource("6_5egw0")]
+position = Vector2(-54, 108)
+
+[node name="Ladder3" parent="." instance=ExtResource("6_5egw0")]
+position = Vector2(216, 72)
+
+[node name="Ladder4" parent="." instance=ExtResource("6_5egw0")]
+position = Vector2(216, 54)
+
+[node name="Ladder5" parent="." instance=ExtResource("6_5egw0")]
+position = Vector2(216, 36)
+
+[node name="Ladder6" parent="." instance=ExtResource("6_5egw0")]
+position = Vector2(216, 18)
+
+[node name="Player" parent="." instance=ExtResource("2_e1b0o")]
+position = Vector2(126, 72)
+FAST_FALL_SPEED = 100.0
+
+[node name="WalkingEnemy" parent="." instance=ExtResource("5_cxe4b")]
+position = Vector2(324, 144)
+
+[node name="WalkingEnemy2" parent="." instance=ExtResource("5_cxe4b")]
+position = Vector2(288, 126)
+
+[node name="WalkingEnemy3" parent="." instance=ExtResource("5_cxe4b")]
+position = Vector2(262, 34)
