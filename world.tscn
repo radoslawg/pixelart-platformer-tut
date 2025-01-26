@@ -52,6 +52,11 @@ position = Vector2(216, 18)
 
 [node name="Player" parent="." instance=ExtResource("2_e1b0o")]
 position = Vector2(126, 72)
+SPEED = 100.0
+ACCELERATION = 5.0
+DEACCELERATION = 15.0
+JUMP_VELOCITY = 300.0
+SMALL_JUMP_VELOCITY = 40.0
 FAST_FALL_SPEED = 100.0
 
 [node name="WalkingEnemy" parent="." instance=ExtResource("5_cxe4b")]
