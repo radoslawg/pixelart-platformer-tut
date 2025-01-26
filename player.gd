@@ -49,6 +49,7 @@ func handle_jump():
 	if is_on_floor():
 		fast_fall = false
 		if (Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_up")):
+			SoundPlayer.play_sound(SoundPlayer.JUMP)
 			velocity.y = -JUMP_VELOCITY
 	else:
 		_sprite.play("Jump")
@@ -87,3 +88,7 @@ func climb_state() -> void:
 		_sprite.play("Run")
 	else:
 		_sprite.play("Idle")
+ 
+func player_death() -> void:
+	SoundPlayer.play_sound(SoundPlayer.HURT)
+	get_tree().reload_current_scene()
