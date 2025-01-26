@@ -1,4 +1,3 @@
-@tool
 extends Path2D
 
 enum ANIMATION_TYPE {
