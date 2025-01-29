@@ -78,3 +78,9 @@ speed = 3.0
 position = Vector2(56, 72)
 curve = SubResource("Curve2D_rk2n6")
 speed = 0.75
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(135, 67)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+editor_draw_drag_margin = true

@@ -14,8 +14,9 @@ enum {
 @export var SMALL_JUMP_VELOCITY = 40.0
 @export var FAST_FALL_SPEED = 200.0
 
-@onready var _sprite = $AnimatedSprite2D
-@onready var ladderCheck = $LadderCheck
+@onready var _sprite: = $AnimatedSprite2D
+@onready var ladderCheck: = $LadderCheck
+@onready var remoteTransform2D: = $RemoteTransform2D
 
 var fast_fall = false
 var state = MOVE
@@ -26,11 +27,14 @@ func _physics_process(delta: float) -> void:
 			move_state(delta)
 		CLIMB:
 			climb_state()
-	
 	move_and_slide()
 
-func handle_input():
 
+func connect_camera(camera):
+	var camera_path = camera.get_path()
+	remoteTransform2D.remote_path = camera_path
+
+func handle_input():
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
@@ -91,4 +95,4 @@ func climb_state() -> void:
  
 func player_death() -> void:
 	SoundPlayer.play_sound(SoundPlayer.HURT)
-	get_tree().reload_current_scene()
+	queue_free()

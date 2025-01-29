@@ -67,15 +67,11 @@ flip_h = true
 position = Vector2(9, -6.5)
 shape = SubResource("RectangleShape2D_x5dyl")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(79, -22)
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-editor_draw_drag_margin = true
-
 [node name="LadderCheck" type="RayCast2D" parent="."]
 position = Vector2(9, -14)
 target_position = Vector2(0, 16)
 hit_from_inside = true
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]

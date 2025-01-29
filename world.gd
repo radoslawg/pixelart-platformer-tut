@@ -1,8 +1,13 @@
 extends Node2D
 
+
+@onready var camera: = $Camera2D
+@onready var player: = $Player
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	RenderingServer.set_default_clear_color(Color.LIGHT_BLUE)
+	player.connect_camera(camera)
 
 var timer = 0.0
 var hit = 0
