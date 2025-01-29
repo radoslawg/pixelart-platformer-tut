@@ -96,3 +96,4 @@ func climb_state() -> void:
 func player_death() -> void:
 	SoundPlayer.play_sound(SoundPlayer.HURT)
 	queue_free()
+	Events.emit_signal("player_died")
