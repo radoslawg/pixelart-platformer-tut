@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgghof8xkyv0g"]
+[gd_scene load_steps=3 format=3 uid="uid://dkbfquulkequr"]
 
-[ext_resource type="Texture2D" uid="uid://dj4i78gbmc8lh" path="res://tilemap_packed.png" id="1_4ljaj"]
+[ext_resource type="Texture2D" uid="uid://dj4i78gbmc8lh" path="res://Graphics/tilemap_packed.png" id="1_6dovk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fn16r"]
 size = Vector2(18, 18)
@@ -8,7 +8,7 @@ size = Vector2(18, 18)
 [node name="Block" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_4ljaj")
+texture = ExtResource("1_6dovk")
 region_enabled = true
 region_rect = Rect2(126, 36, 18, 18)
 

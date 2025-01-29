@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvsu0re5t7n6v"]
 
 [ext_resource type="Script" path="res://Scenes/World/Ladder.gd" id="1_lspw3"]
-[ext_resource type="Texture2D" uid="uid://dj4i78gbmc8lh" path="res://tilemap_packed.png" id="2_ij5ex"]
+[ext_resource type="Texture2D" uid="uid://dj4i78gbmc8lh" path="res://Graphics/tilemap_packed.png" id="2_ij5ex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8bdm"]
 

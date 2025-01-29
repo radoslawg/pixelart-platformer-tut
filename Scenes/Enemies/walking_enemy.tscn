@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bc4x1ya6oroi"]
 
-[ext_resource type="Texture2D" uid="uid://c54oro4n3hmbs" path="res://tilemap-characters_packed.png" id="1_8if5k"]
+[ext_resource type="Texture2D" uid="uid://c54oro4n3hmbs" path="res://Graphics/tilemap-characters_packed.png" id="1_8if5k"]
 [ext_resource type="Script" path="res://Scenes/Enemies/walking_enemy.gd" id="1_in4wd"]
 [ext_resource type="PackedScene" uid="uid://cjlr23xfd1kc0" path="res://Scenes/Components/hitbox.tscn" id="3_l6722"]
 
