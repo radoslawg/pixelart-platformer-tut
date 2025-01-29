@@ -57,21 +57,22 @@ collision_layer = 2
 script = ExtResource("1_15gbl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(9, -9)
+position = Vector2(0, -9)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_1wogp")
 animation = &"Idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(9, -6.5)
+position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_x5dyl")
 
 [node name="LadderCheck" type="RayCast2D" parent="."]
-position = Vector2(9, -14)
+position = Vector2(0, -14)
 target_position = Vector2(0, 16)
 hit_from_inside = true
 collide_with_areas = true
 collide_with_bodies = false
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+position = Vector2(-9, 0)
