@@ -14,6 +14,7 @@ func _ready() -> void:
 	connect_camera()
 	Events.connect("player_died", self._on_player_died)
 	playerSpawnLocation = player.global_position
+	Events.connect("checkpoint_reached", self._on_checkpoint_reached)
 
 var timer = 0.0
 var hit = 0
@@ -42,3 +43,6 @@ func _on_player_died() -> void:
 	player.position = playerSpawnLocation
 	add_child(player)
 	connect_camera()
+
+func _on_checkpoint_reached(position: Vector2) -> void:
+	playerSpawnLocation = position

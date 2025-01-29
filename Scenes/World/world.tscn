@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://d4fb6o8wrg6ub"]
+[gd_scene load_steps=11 format=4 uid="uid://d4fb6o8wrg6ub"]
 
 [ext_resource type="Script" path="res://Scenes/world.gd" id="1_d7vjq"]
 [ext_resource type="PackedScene" uid="uid://dwjrht2mchjxu" path="res://Scenes/World/tile_map.tscn" id="2_b0qrf"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dyp0u7thvx3nv" path="res://Scenes/player.tscn" id="5_6sk8f"]
 [ext_resource type="PackedScene" uid="uid://bc4x1ya6oroi" path="res://Scenes/Enemies/walking_enemy.tscn" id="6_kslk7"]
 [ext_resource type="PackedScene" uid="uid://bv0t0krhtymmb" path="res://Scenes/Enemies/moving_spike_enemy.tscn" id="7_ucse1"]
+[ext_resource type="PackedScene" uid="uid://qrs5sdjbmj5d" path="res://Scenes/World/checkpoint.tscn" id="8_off0r"]
 
 [sub_resource type="Curve2D" id="Curve2D_hsgdm"]
 _data = {
@@ -52,11 +53,6 @@ position = Vector2(216, 18)
 
 [node name="Player" parent="." instance=ExtResource("5_6sk8f")]
 position = Vector2(126, 72)
-SPEED = 100.0
-ACCELERATION = 5.0
-DEACCELERATION = 15.0
-JUMP_VELOCITY = 300.0
-SMALL_JUMP_VELOCITY = 40.0
 FAST_FALL_SPEED = 100.0
 
 [node name="WalkingEnemy" parent="." instance=ExtResource("6_kslk7")]
@@ -86,3 +82,6 @@ drag_horizontal_enabled = true
 editor_draw_drag_margin = true
 
 [node name="RespawnTimer" type="Timer" parent="."]
+
+[node name="Checkpoint" parent="." instance=ExtResource("8_off0r")]
+position = Vector2(1, 92)
