@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://d4fb6o8wrg6ub"]
+[gd_scene load_steps=12 format=4 uid="uid://d4fb6o8wrg6ub"]
 
 [ext_resource type="Script" path="res://Scenes/world.gd" id="1_d7vjq"]
 [ext_resource type="PackedScene" uid="uid://dwjrht2mchjxu" path="res://Scenes/World/tile_map.tscn" id="2_b0qrf"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bc4x1ya6oroi" path="res://Scenes/Enemies/walking_enemy.tscn" id="6_kslk7"]
 [ext_resource type="PackedScene" uid="uid://bv0t0krhtymmb" path="res://Scenes/Enemies/moving_spike_enemy.tscn" id="7_ucse1"]
 [ext_resource type="PackedScene" uid="uid://qrs5sdjbmj5d" path="res://Scenes/World/checkpoint.tscn" id="8_off0r"]
+[ext_resource type="PackedScene" uid="uid://ciyiqdgjdvoc5" path="res://Scenes/Enemies/stomp_enemy.tscn" id="9_ds8vw"]
 
 [sub_resource type="Curve2D" id="Curve2D_hsgdm"]
 _data = {
@@ -85,3 +86,6 @@ editor_draw_drag_margin = true
 
 [node name="Checkpoint" parent="." instance=ExtResource("8_off0r")]
 position = Vector2(1, 92)
+
+[node name="StompEnemy" parent="." instance=ExtResource("9_ds8vw")]
+position = Vector2(100, 17)

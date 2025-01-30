@@ -1,7 +1,8 @@
 extends Node
 
-const HURT = preload("res://Audio/Sounds/hurt.wav")
-const JUMP = preload("res://Audio/Sounds/jump.wav")
+const HURT: = preload("res://Audio/Sounds/hurt.wav")
+const JUMP: = preload("res://Audio/Sounds/jump.wav")
+const STOMP: = preload("res://Audio/Sounds/stomp.wav")
 
 @onready var audioPlayers: = %AudioPlayers.get_children()
 
