@@ -38,7 +38,6 @@ func fall_state(delta: float) -> void:
 		dust.lifetime = GROUND_TIME * 0.9
 		dust.emitting = true
 		ground_timer.start(GROUND_TIME)
-		print_debug(GROUND_TIME)
 		SoundPlayer.play_sound(SoundPlayer.STOMP)
 		state = LAND
 
