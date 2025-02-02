@@ -44,5 +44,5 @@ func _on_player_died() -> void:
 	add_child(player)
 	connect_camera()
 
-func _on_checkpoint_reached(position: Vector2) -> void:
-	playerSpawnLocation = position
+func _on_checkpoint_reached(input_position: Vector2) -> void:
+	playerSpawnLocation = input_position
