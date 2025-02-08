@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://daaeo66sx3nqo"]
+
+[ext_resource type="Script" path="res://Scenes/World/Levels/level.gd" id="1_854dq"]
+[ext_resource type="PackedScene" uid="uid://dyp0u7thvx3nv" path="res://Scenes/player.tscn" id="2_f3odk"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_854dq")
+
+[node name="Player" parent="." instance=ExtResource("2_f3odk")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(135, 67)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+editor_draw_drag_margin = true
+
+[node name="RespawnTimer" type="Timer" parent="."]

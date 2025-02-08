@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=4 uid="uid://ch15tq0ypkt18"]
+
+[ext_resource type="PackedScene" uid="uid://daaeo66sx3nqo" path="res://Scenes/World/Levels/level.tscn" id="1_uhf2r"]
+[ext_resource type="PackedScene" uid="uid://dwjrht2mchjxu" path="res://Scenes/World/tile_map.tscn" id="2_c0voc"]
+[ext_resource type="PackedScene" uid="uid://knlbo3juxoef" path="res://Scenes/World/spikes.tscn" id="3_72ka5"]
+[ext_resource type="PackedScene" uid="uid://bvsu0re5t7n6v" path="res://Scenes/World/Ladder.tscn" id="4_b2d5g"]
+[ext_resource type="PackedScene" uid="uid://bc4x1ya6oroi" path="res://Scenes/Enemies/walking_enemy.tscn" id="5_l2q0w"]
+[ext_resource type="PackedScene" uid="uid://bv0t0krhtymmb" path="res://Scenes/Enemies/moving_spike_enemy.tscn" id="6_hsehv"]
+[ext_resource type="PackedScene" uid="uid://qrs5sdjbmj5d" path="res://Scenes/World/checkpoint.tscn" id="7_iyhup"]
+[ext_resource type="PackedScene" uid="uid://ciyiqdgjdvoc5" path="res://Scenes/Enemies/stomp_enemy.tscn" id="8_k2574"]
+[ext_resource type="PackedScene" uid="uid://b0cfmoidce66s" path="res://Scenes/World/exit.tscn" id="9_rlt4i"]
+
+[sub_resource type="Curve2D" id="Curve2D_sbcm5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 134, 26, 0, 0, 0, 0, 195, 26)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_e35ke"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 135, 27, 0, 0, 0, 0, 238, 26, 0, 0, 0, 0, 238, -66, 0, 0, 0, 0, 187, -66, 0, 0, 0, 0, 186, -86, 0, 0, 0, 0, 116, -86, 0, 0, 0, 0, 115, 27, 0, 0, 0, 0, 135, 27)
+}
+point_count = 8
+
+[node name="Level1" instance=ExtResource("1_uhf2r")]
+
+[node name="Player" parent="." index="0"]
+position = Vector2(136, 75)
+
+[node name="TileMapLayer" parent="." index="2" instance=ExtResource("2_c0voc")]
+tile_map_data = PackedByteArray("AAADAAcAAAAFAAEAAAAEAAcAAAACAAYAAAAFAAcAAAACAAYAAAAGAAcAAAACAAYAAAAHAAcAAAACAAYAAAAIAAcAAAAEAAEAAAAJAAcAAAACAAMAAAAKAAcAAAACAAMAAAALAAcAAAACAAMAAAAMAAcAAAACAAMAAAACAAcAAAACAAMAAAABAAcAAAAEAAEAAAAAAAcAAAACAAYAAAD//wcAAAACAAYAAAD+/wcAAAAFAAEAAAD9/wcAAAACAAMAAAANAAcAAAACAAMAAAAOAAcAAAACAAMAAAAPAAcAAAACAAMAAAAQAAcAAAADAAMAAAD9/wgAAAACAAYAAAD+/wgAAAACAAYAAAD//wgAAAACAAYAAAAAAAgAAAACAAYAAAABAAgAAAACAAYAAAACAAgAAAACAAYAAAADAAgAAAACAAYAAAAEAAgAAAACAAYAAAAFAAgAAAACAAYAAAAGAAgAAAACAAYAAAAHAAgAAAACAAYAAAAIAAgAAAACAAYAAAAJAAgAAAACAAYAAAAKAAgAAAACAAYAAAALAAgAAAACAAYAAAAMAAgAAAACAAYAAAANAAgAAAACAAYAAAAOAAgAAAACAAYAAAAPAAgAAAACAAYAAAAQAAgAAAAEAAEAAAD8/wgAAAABAAYAAAD8/wcAAAABAAMAAAD+/wYAAAABAAMAAAD//wYAAAAFAAEAAAD//wUAAAABAAMAAAAAAAUAAAADAAMAAAAAAAYAAAAEAAEAAAABAAYAAAADAAMAAAAEAAYAAAACAAMAAAAFAAYAAAAFAAEAAAAGAAYAAAACAAYAAAAHAAYAAAAEAAEAAAAHAAUAAAADAAMAAAAGAAUAAAACAAMAAAAIAAYAAAADAAMAAAADAAYAAAABAAMAAAAFAAUAAAABAAMAAAAKAAQAAAAHAAIAAAALAAQAAAAHAAIAAAAMAAQAAAAHAAIAAAANAAQAAAAHAAIAAAANAAMAAAAHAAIAAAANAAIAAAAHAAIAAAAOAAIAAAAHAAIAAAAPAAIAAAAHAAIAAAAOAAMAAAAHAAIAAAAOAAQAAAAHAAIAAAAPAAQAAAAHAAIAAAAPAAMAAAAHAAIAAAD8/wUAAAAHAAIAAAD7/wUAAAAHAAIAAAD6/wUAAAAHAAIAAAD5/wUAAAAHAAIAAAARAAgAAAACAAMAAAASAAgAAAACAAMAAAATAAgAAAACAAMAAAAUAAgAAAAFAAEAAAAUAAcAAAABAAMAAAAVAAcAAAACAAMAAAAWAAcAAAACAAMAAAAXAAcAAAADAAMAAAAVAAgAAAACAAYAAAAWAAgAAAACAAYAAAAXAAgAAAADAAYAAAAXAAkAAAADAAcAAAAWAAkAAAACAAcAAAAVAAkAAAACAAcAAAAUAAkAAAACAAcAAAATAAkAAAACAAcAAAASAAkAAAACAAcAAAARAAkAAAACAAcAAAAQAAkAAAACAAcAAAAPAAkAAAACAAcAAAAOAAkAAAACAAcAAAANAAkAAAACAAcAAAAMAAkAAAACAAcAAAALAAkAAAACAAcAAAAKAAkAAAACAAcAAAAJAAkAAAACAAcAAAAIAAkAAAACAAcAAAAHAAkAAAACAAcAAAAGAAkAAAACAAcAAAAFAAkAAAACAAcAAAAEAAkAAAACAAcAAAADAAkAAAACAAcAAAACAAkAAAACAAcAAAABAAkAAAACAAcAAAAAAAkAAAACAAcAAAD//wkAAAACAAcAAAD+/wkAAAACAAcAAAD9/wkAAAACAAcAAAD8/wkAAAABAAcAAAA=")
+
+[node name="Spikes" parent="." index="3" instance=ExtResource("3_72ka5")]
+position = Vector2(36, 126)
+
+[node name="Spikes2" parent="." index="4" instance=ExtResource("3_72ka5")]
+position = Vector2(162, 126)
+
+[node name="Ladder" parent="." index="5" instance=ExtResource("4_b2d5g")]
+position = Vector2(-54, 126)
+
+[node name="Ladder2" parent="." index="6" instance=ExtResource("4_b2d5g")]
+position = Vector2(-54, 108)
+
+[node name="Ladder3" parent="." index="7" instance=ExtResource("4_b2d5g")]
+position = Vector2(216, 72)
+
+[node name="Ladder4" parent="." index="8" instance=ExtResource("4_b2d5g")]
+position = Vector2(216, 54)
+
+[node name="Ladder5" parent="." index="9" instance=ExtResource("4_b2d5g")]
+position = Vector2(216, 36)
+
+[node name="Ladder6" parent="." index="10" instance=ExtResource("4_b2d5g")]
+position = Vector2(216, 18)
+
+[node name="WalkingEnemy" parent="." index="11" instance=ExtResource("5_l2q0w")]
+position = Vector2(324, 144)
+
+[node name="WalkingEnemy2" parent="." index="12" instance=ExtResource("5_l2q0w")]
+position = Vector2(288, 126)
+
+[node name="WalkingEnemy3" parent="." index="13" instance=ExtResource("5_l2q0w")]
+position = Vector2(262, 34)
+
+[node name="MovingSpikeEnemy" parent="." index="14" instance=ExtResource("6_hsehv")]
+position = Vector2(-108, 72)
+curve = SubResource("Curve2D_sbcm5")
+animation_type = 1
+speed = 3.0
+
+[node name="MovingSpikeEnemy2" parent="." index="15" instance=ExtResource("6_hsehv")]
+position = Vector2(56, 72)
+curve = SubResource("Curve2D_e35ke")
+speed = 0.75
+
+[node name="Checkpoint" parent="." index="16" instance=ExtResource("7_iyhup")]
+position = Vector2(1, 92)
+
+[node name="StompEnemy" parent="." index="17" instance=ExtResource("8_k2574")]
+position = Vector2(100, 17)
+
+[node name="Exit" parent="." index="19" instance=ExtResource("9_rlt4i")]
+position = Vector2(206, 73)
+target_level_scene = "res://Scenes/World/Levels/level_2.tscn"
