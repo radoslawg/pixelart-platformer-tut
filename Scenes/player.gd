@@ -20,6 +20,7 @@ enum {
 
 var fast_fall = false
 var state = MOVE
+var on_door: bool = false
 
 func _physics_process(delta: float) -> void:
 	match state:
@@ -50,6 +51,7 @@ func handle_input(delta: float):
 			_sprite.play("Idle")
 
 func handle_jump(delta: float):
+	if on_door: return
 	if is_on_floor():
 		fast_fall = false
 		if (Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_up")):
